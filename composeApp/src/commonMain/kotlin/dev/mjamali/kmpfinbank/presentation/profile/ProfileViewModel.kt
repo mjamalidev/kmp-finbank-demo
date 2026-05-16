@@ -2,14 +2,14 @@ package dev.mjamali.kmpfinbank.presentation.profile
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import dev.mjamali.kmpfinbank.domain.usecase.LogoutUseCase
+import dev.mjamali.kmpfinbank.domain.usecase.ObserveBalanceVisibilityUseCase
+import dev.mjamali.kmpfinbank.domain.usecase.ToggleBalanceVisibilityUseCase
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
-import dev.mjamali.kmpfinbank.domain.usecase.LogoutUseCase
-import dev.mjamali.kmpfinbank.domain.usecase.ObserveBalanceVisibilityUseCase
-import dev.mjamali.kmpfinbank.domain.usecase.ToggleBalanceVisibilityUseCase
 
 class ProfileViewModel(
     private val observeBalanceVisibilityUseCase: ObserveBalanceVisibilityUseCase,

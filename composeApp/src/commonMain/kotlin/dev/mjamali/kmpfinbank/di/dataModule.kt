@@ -1,12 +1,5 @@
 package dev.mjamali.kmpfinbank.di
 
-import io.ktor.client.HttpClient
-import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
-import io.ktor.client.plugins.defaultRequest
-import io.ktor.http.ContentType
-import io.ktor.http.contentType
-import io.ktor.serialization.kotlinx.json.json
-import kotlinx.serialization.json.Json
 import dev.mjamali.kmpfinbank.common.time.SessionTimer
 import dev.mjamali.kmpfinbank.data.cache.DataStoreTransactionCache
 import dev.mjamali.kmpfinbank.data.cache.LocalTransactionCache
@@ -19,6 +12,13 @@ import dev.mjamali.kmpfinbank.domain.repository.AuthRepository
 import dev.mjamali.kmpfinbank.domain.repository.BankingRepository
 import dev.mjamali.kmpfinbank.domain.repository.ReceiptRepository
 import dev.mjamali.kmpfinbank.domain.repository.SettingsRepository
+import io.ktor.client.HttpClient
+import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
+import io.ktor.client.plugins.defaultRequest
+import io.ktor.http.ContentType
+import io.ktor.http.contentType
+import io.ktor.serialization.kotlinx.json.json
+import kotlinx.serialization.json.Json
 import org.koin.dsl.module
 
 val dataModule = module {

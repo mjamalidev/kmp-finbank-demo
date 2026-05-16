@@ -2,16 +2,16 @@ package dev.mjamali.kmpfinbank.presentation.login
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.StateFlow
-import kotlinx.coroutines.flow.asStateFlow
-import kotlinx.coroutines.flow.update
-import kotlinx.coroutines.launch
 import dev.mjamali.kmpfinbank.biometric.BiometricMessages
 import dev.mjamali.kmpfinbank.data.remote.dto.LoginRequestDto
 import dev.mjamali.kmpfinbank.domain.common.Resource
 import dev.mjamali.kmpfinbank.domain.usecase.LoginUseCase
 import dev.mjamali.kmpfinbank.domain.usecase.RefreshLoginUseCase
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.update
+import kotlinx.coroutines.launch
 
 class LoginViewModel(
     private val loginUseCase: LoginUseCase,

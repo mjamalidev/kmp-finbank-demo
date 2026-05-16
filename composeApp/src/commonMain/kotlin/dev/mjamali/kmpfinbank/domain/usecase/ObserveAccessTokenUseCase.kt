@@ -1,7 +1,7 @@
 package dev.mjamali.kmpfinbank.domain.usecase
 
-import kotlinx.coroutines.flow.Flow
 import dev.mjamali.kmpfinbank.domain.repository.AuthRepository
+import kotlinx.coroutines.flow.Flow
 
 class ObserveAccessTokenUseCase(
     private val authRepository: AuthRepository

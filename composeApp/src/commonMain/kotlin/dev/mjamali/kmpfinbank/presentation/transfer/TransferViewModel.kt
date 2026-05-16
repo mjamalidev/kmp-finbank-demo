@@ -2,17 +2,17 @@ package dev.mjamali.kmpfinbank.presentation.transfer
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import dev.mjamali.kmpfinbank.domain.common.Resource
+import dev.mjamali.kmpfinbank.domain.model.Transfer
+import dev.mjamali.kmpfinbank.domain.result.Result
+import dev.mjamali.kmpfinbank.domain.usecase.GetLastReceiptUseCase
+import dev.mjamali.kmpfinbank.domain.usecase.TransferMoneyUseCase
+import dev.mjamali.kmpfinbank.domain.usecase.ValidateTransferUseCase
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
-import dev.mjamali.kmpfinbank.domain.common.Resource
-import dev.mjamali.kmpfinbank.domain.model.Transfer
-import dev.mjamali.kmpfinbank.domain.usecase.GetLastReceiptUseCase
-import dev.mjamali.kmpfinbank.domain.usecase.TransferMoneyUseCase
-import dev.mjamali.kmpfinbank.domain.usecase.ValidateTransferUseCase
-import dev.mjamali.kmpfinbank.domain.result.Result
 
 class TransferViewModel(
     private val transferMoneyUseCase: TransferMoneyUseCase,

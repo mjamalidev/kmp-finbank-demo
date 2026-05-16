@@ -3,6 +3,16 @@ package dev.mjamali.kmpfinbank.data.repository
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.core.edit
+import dev.mjamali.kmpfinbank.data.local.PreferenceKeys
+import dev.mjamali.kmpfinbank.data.mapper.toDomain
+import dev.mjamali.kmpfinbank.data.remote.dto.LoginRequestDto
+import dev.mjamali.kmpfinbank.data.remote.dto.LoginResponseDto
+import dev.mjamali.kmpfinbank.data.remote.dto.RefreshTokenRequestDto
+import dev.mjamali.kmpfinbank.data.remote.dto.RefreshTokenResponseDto
+import dev.mjamali.kmpfinbank.domain.model.ApiErrorModel
+import dev.mjamali.kmpfinbank.domain.model.Login
+import dev.mjamali.kmpfinbank.domain.repository.AuthRepository
+import dev.mjamali.kmpfinbank.domain.result.Result
 import io.ktor.client.HttpClient
 import io.ktor.client.call.body
 import io.ktor.client.request.post
@@ -13,17 +23,7 @@ import io.ktor.http.contentType
 import io.ktor.http.isSuccess
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
-import dev.mjamali.kmpfinbank.data.local.PreferenceKeys
-import dev.mjamali.kmpfinbank.data.mapper.toDomain
-import dev.mjamali.kmpfinbank.data.remote.dto.LoginRequestDto
-import dev.mjamali.kmpfinbank.data.remote.dto.LoginResponseDto
-import dev.mjamali.kmpfinbank.data.remote.dto.RefreshTokenRequestDto
-import dev.mjamali.kmpfinbank.data.remote.dto.RefreshTokenResponseDto
-import dev.mjamali.kmpfinbank.domain.model.ApiErrorModel
-import dev.mjamali.kmpfinbank.domain.model.Login
-import dev.mjamali.kmpfinbank.domain.repository.AuthRepository
 import kotlin.time.ExperimentalTime
-import dev.mjamali.kmpfinbank.domain.result.Result
 
 class AuthRepositoryImpl(
     private val dataStore: DataStore<Preferences>,

@@ -2,14 +2,14 @@ package dev.mjamali.kmpfinbank.presentation.accounts
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import dev.mjamali.kmpfinbank.domain.common.Resource
+import dev.mjamali.kmpfinbank.domain.usecase.GetAccountDetailsUseCase
+import dev.mjamali.kmpfinbank.domain.usecase.GetAccountsUseCase
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
-import dev.mjamali.kmpfinbank.domain.common.Resource
-import dev.mjamali.kmpfinbank.domain.usecase.GetAccountDetailsUseCase
-import dev.mjamali.kmpfinbank.domain.usecase.GetAccountsUseCase
 
 class AccountsViewModel(
     private val getAccountsUseCase: GetAccountsUseCase,

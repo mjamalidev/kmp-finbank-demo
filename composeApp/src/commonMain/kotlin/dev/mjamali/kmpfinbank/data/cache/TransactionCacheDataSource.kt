@@ -1,8 +1,8 @@
 package dev.mjamali.kmpfinbank.data.cache
 
+import dev.mjamali.kmpfinbank.domain.model.Transaction
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
-import dev.mjamali.kmpfinbank.domain.model.Transaction
 
 class TransactionCacheDataSource : LocalTransactionCache {
 

@@ -3,11 +3,11 @@ package dev.mjamali.kmpfinbank.data.cache
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.core.edit
+import dev.mjamali.kmpfinbank.data.local.PreferenceKeys
+import dev.mjamali.kmpfinbank.domain.model.Transaction
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.map
 import kotlinx.serialization.json.Json
-import dev.mjamali.kmpfinbank.data.local.PreferenceKeys
-import dev.mjamali.kmpfinbank.domain.model.Transaction
 
 class DataStoreTransactionCache(
     private val dataStore: DataStore<Preferences>,

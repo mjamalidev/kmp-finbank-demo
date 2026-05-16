@@ -1,7 +1,7 @@
 package dev.mjamali.kmpfinbank.domain.usecase
 
-import kotlinx.coroutines.flow.Flow
 import dev.mjamali.kmpfinbank.common.time.SessionTimer
+import kotlinx.coroutines.flow.Flow
 
 class ObserveSessionTimeoutUseCase(
     private val sessionTimer: SessionTimer

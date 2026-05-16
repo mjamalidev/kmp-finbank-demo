@@ -1,16 +1,23 @@
 # KMP FinBank Demo
 
-A portfolio-grade Kotlin Multiplatform banking/fintech demo application showcasing shared business logic, Compose Multiplatform UI, Clean Architecture, Ktor MockEngine, Koin, DataStore, and Android biometric authentication.
+A portfolio-grade Kotlin Multiplatform banking/fintech demo application showcasing shared business
+logic, Compose Multiplatform UI, Clean Architecture, Ktor MockEngine, Koin, DataStore, and Android
+biometric authentication.
 
-> **Disclaimer:** This project uses mock data only. It does not connect to any real banking service, payment gateway, or customer data source.
+> **Disclaimer:** This project uses mock data only. It does not connect to any real banking service,
+> payment gateway, or customer data source.
 
 ---
 
 ## Overview
 
-KMP FinBank Demo is a Kotlin Multiplatform sample project designed to demonstrate how a fintech-style mobile application can be structured with shared business logic and shared UI across Android and iOS.
+KMP FinBank Demo is a Kotlin Multiplatform sample project designed to demonstrate how a
+fintech-style mobile application can be structured with shared business logic and shared UI across
+Android and iOS.
 
-The project focuses on clean architecture, modular code organization, reactive state management, mocked backend communication, minor-unit based money handling, and platform-specific biometric authentication on Android.
+The project focuses on clean architecture, modular code organization, reactive state management,
+mocked backend communication, minor-unit based money handling, and platform-specific biometric
+authentication on Android.
 
 ---
 
@@ -27,7 +34,8 @@ The project focuses on clean architecture, modular code organization, reactive s
 - Android biometric login using Android Keystore and BiometricPrompt
 - Minor-unit based money representation using `Long`
 - Safe enum mapping for mocked/API values
-- Fintech-style flows: login, dashboard, accounts, cards, transactions, transfers, receipts, and profile
+- Fintech-style flows: login, dashboard, accounts, cards, transactions, transfers, receipts, and
+  profile
 
 ---
 
@@ -61,18 +69,18 @@ Password: demo
 
 ## Tech Stack
 
-| Area | Technologies |
-| --- | --- |
-| Language | Kotlin |
-| Cross-platform | Kotlin Multiplatform, Compose Multiplatform |
-| UI | Compose Multiplatform, Material Design |
-| Architecture | Clean Architecture, MVVM, Repository Pattern, Use Cases |
-| Networking | Ktor Client, Ktor MockEngine, Kotlinx Serialization |
-| Async | Coroutines, Flow, StateFlow |
-| Dependency Injection | Koin |
-| Local Storage | DataStore Preferences |
-| Android Security | Android Keystore, BiometricPrompt |
-| Testing | Kotlin Test / Common Tests |
+| Area                 | Technologies                                            |
+|----------------------|---------------------------------------------------------|
+| Language             | Kotlin                                                  |
+| Cross-platform       | Kotlin Multiplatform, Compose Multiplatform             |
+| UI                   | Compose Multiplatform, Material Design                  |
+| Architecture         | Clean Architecture, MVVM, Repository Pattern, Use Cases |
+| Networking           | Ktor Client, Ktor MockEngine, Kotlinx Serialization     |
+| Async                | Coroutines, Flow, StateFlow                             |
+| Dependency Injection | Koin                                                    |
+| Local Storage        | DataStore Preferences                                   |
+| Android Security     | Android Keystore, BiometricPrompt                       |
+| Testing              | Kotlin Test / Common Tests                              |
 
 ---
 
@@ -96,7 +104,8 @@ Presentation -> Domain -> Data
 - Contains business models and use cases.
 - Use cases coordinate app-specific business logic.
 - Repository interfaces define contracts between domain and data layers.
-- Money values are represented using minor units with `Long` to avoid floating-point precision issues.
+- Money values are represented using minor units with `Long` to avoid floating-point precision
+  issues.
 
 ### Data Layer
 
@@ -150,9 +159,12 @@ refreshToken
 
 The `accessToken` is stored for the active session.
 
-On Android, the `refreshToken` can be stored behind biometric authentication. During biometric login, the app decrypts the stored refresh token, calls the mocked refresh endpoint, receives a new access token, and navigates to the dashboard.
+On Android, the `refreshToken` can be stored behind biometric authentication. During biometric
+login, the app decrypts the stored refresh token, calls the mocked refresh endpoint, receives a new
+access token, and navigates to the dashboard.
 
-If biometric authentication fails, the biometric token is unavailable, or the session is considered expired, the user is asked to log in again with username and password.
+If biometric authentication fails, the biometric token is unavailable, or the session is considered
+expired, the user is asked to log in again with username and password.
 
 > iOS biometric authentication is intentionally not implemented in this demo version.
 
@@ -219,7 +231,8 @@ Make sure Gradle dependencies are synced from Android Studio before running the 
 ./gradlew :composeApp:allTests
 ```
 
-The project includes common test setup and can be extended with additional tests for domain use cases, repositories, mappers, formatting, and validation logic.
+The project includes common test setup and can be extended with additional tests for domain use
+cases, repositories, mappers, formatting, and validation logic.
 
 ---
 
@@ -270,7 +283,8 @@ Current limitations:
 
 ## Why This Project Exists
 
-This repository demonstrates how a fintech-style Kotlin Multiplatform application can be structured using modern Android/KMP development practices.
+This repository demonstrates how a fintech-style Kotlin Multiplatform application can be structured
+using modern Android/KMP development practices.
 
 It is mainly focused on:
 

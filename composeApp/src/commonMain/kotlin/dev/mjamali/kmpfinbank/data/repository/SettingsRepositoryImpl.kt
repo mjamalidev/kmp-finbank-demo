@@ -3,10 +3,10 @@ package dev.mjamali.kmpfinbank.data.repository
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.core.edit
-import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.map
 import dev.mjamali.kmpfinbank.data.local.PreferenceKeys
 import dev.mjamali.kmpfinbank.domain.repository.SettingsRepository
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.map
 
 class SettingsRepositoryImpl(
     private val dataStore: DataStore<Preferences>

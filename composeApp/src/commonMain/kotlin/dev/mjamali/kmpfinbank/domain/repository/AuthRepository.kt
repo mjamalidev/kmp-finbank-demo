@@ -1,10 +1,10 @@
 package dev.mjamali.kmpfinbank.domain.repository
 
-import kotlinx.coroutines.flow.Flow
 import dev.mjamali.kmpfinbank.data.remote.dto.LoginRequestDto
 import dev.mjamali.kmpfinbank.domain.model.ApiErrorModel
 import dev.mjamali.kmpfinbank.domain.model.Login
 import dev.mjamali.kmpfinbank.domain.result.Result
+import kotlinx.coroutines.flow.Flow
 
 
 interface AuthRepository {

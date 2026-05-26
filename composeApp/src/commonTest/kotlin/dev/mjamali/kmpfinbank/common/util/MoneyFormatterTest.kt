@@ -25,4 +25,21 @@ class MoneyFormatterTest {
 
         assertEquals("••••••••", result)
     }
+
+    @Test
+    fun formatsNegativeMinorUnitsWithSign() {
+        val result = MoneyFormatter.format(
+            amountMinor = -123456,
+            currency = "EUR"
+        )
+
+        assertEquals("-1,234.56 EUR", result)
+    }
+
+    @Test
+    fun formatsInputWithoutCurrency() {
+        val result = MoneyFormatter.formatInput(907)
+
+        assertEquals("9.07", result)
+    }
 }

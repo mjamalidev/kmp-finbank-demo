@@ -271,7 +271,7 @@ Current limitations:
 
 ## Roadmap
 
-- Add more unit tests for use cases, repositories, and mappers
+- Expand unit test coverage for additional use cases, repositories, edge cases, and validation logic
 - Add GitHub Actions CI for build and test checks
 - Add a short demo GIF or screenshots in the future
 - Improve session timeout handling based on real user activity
